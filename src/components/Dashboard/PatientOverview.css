@@ -1,0 +1,321 @@
+.patient-overview {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+/* Header */
+
+.patient-overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.patient-overview-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.patient-overview-header p {
+  margin: 5px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.patient-view-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.patient-view-btn:hover {
+  color: #1d4ed8;
+}
+
+/* Patient list */
+
+.patient-list {
+  width: 100%;
+}
+
+.patient-row {
+  min-height: 76px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1.4fr)
+    minmax(100px, 0.8fr)
+    minmax(110px, 1fr)
+    36px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 20px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  transition: background 0.2s ease;
+}
+
+.patient-row:last-child {
+  border-bottom: none;
+}
+
+.patient-row:hover {
+  background: #f8fafc;
+}
+
+/* Patient */
+
+.patient-main {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.patient-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.patient-name {
+  min-width: 0;
+}
+
+.patient-name strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #1e293b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.patient-name span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+/* Patient information */
+
+.patient-info span,
+.patient-department span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.patient-info strong,
+.patient-department strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #475569;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Menu */
+
+.patient-menu {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  cursor: pointer;
+}
+
+.patient-menu:hover {
+  background: #f1f5f9;
+
+  color: #475569;
+}
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 1000px) {
+  .patient-row {
+    grid-template-columns:
+      minmax(150px, 1.3fr)
+      minmax(90px, 0.8fr)
+      minmax(100px, 1fr)
+      32px;
+
+    gap: 9px;
+
+    padding: 12px 16px;
+  }
+
+  .patient-overview-header {
+    padding: 17px 16px;
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 700px) {
+  .patient-overview-header {
+    padding: 16px;
+
+    align-items: flex-start;
+  }
+
+  .patient-overview-header h3 {
+    font-size: 13px;
+  }
+
+  .patient-overview-header p {
+    max-width: 190px;
+
+    line-height: 1.5;
+  }
+
+  .patient-row {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+
+    padding: 15px 16px;
+
+    min-height: auto;
+  }
+
+  .patient-main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .patient-info {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding-left: 46px;
+  }
+
+  .patient-department {
+    grid-column: 1;
+    grid-row: 3;
+
+    padding-left: 46px;
+  }
+
+  .patient-menu {
+    grid-column: 2;
+    grid-row: 1;
+
+    align-self: center;
+  }
+}
+
+/* ================================
+   Small phones
+================================ */
+
+@media (max-width: 400px) {
+  .patient-overview-header {
+    padding: 14px;
+  }
+
+  .patient-row {
+    padding: 14px;
+  }
+
+  .patient-view-btn {
+    font-size: 10px;
+  }
+
+  .patient-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .patient-name strong {
+    font-size: 11px;
+  }
+}

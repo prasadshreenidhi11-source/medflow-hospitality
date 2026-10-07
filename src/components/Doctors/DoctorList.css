@@ -1,0 +1,172 @@
+/* =========================================================
+   DOCTOR LIST
+   ========================================================= */
+
+.doctor-list-container {
+  width: 100%;
+  margin-top: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.doctor-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid #eef0f4;
+}
+
+.doctor-list-header h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.doctor-list-header p {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+
+  color: #6b7280;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.doctor-search {
+  width: 260px;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.doctor-search svg {
+  flex-shrink: 0;
+
+  color: #94a3b8;
+}
+
+.doctor-search:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.doctor-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  color: #111827;
+}
+
+.doctor-search input::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.doctor-empty-state {
+  min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  color: #94a3b8;
+}
+
+.doctor-empty-state svg {
+  margin-bottom: 12px;
+}
+
+.doctor-empty-state h4 {
+  margin: 0 0 6px;
+
+  font-size: 15px;
+
+  color: #374151;
+}
+
+.doctor-empty-state p {
+  margin: 0;
+
+  max-width: 350px;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: #9ca3af;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .doctor-list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .doctor-search {
+    width: 100%;
+  }
+}
